@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Saini - Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/all.min.css">
+    <!-- EmailJS CDN - NEWLY ADDED -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-glow"></div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-container"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-animation">
+            <div class="loading-text">INITIALIZING...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">R.S</div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-title-container">
+                <h1 class="hero-title glitch-text" data-text="RAHUL SAINI">RAHUL SAINI</h1>
+                <p class="hero-subtitle">Frontend Developer (Learner)</p>
+                <div class="hologram-frame">
+                    <div class="hologram-line"></div>
+                    <div class="hologram-line"></div>
+                    <div class="hologram-line"></div>
+                    <div class="hologram-line"></div>
+                </div>
+            </div>
+            <div class="hero-3d-container">
+                <div id="hero-3d-scene"></div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>SCROLL TO EXPLORE</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">ABOUT</h2>
+            <div class="about-content">
+                <div class="glass-card about-card">
+                    <div class="card-header">
+                        <div class="status-indicator active"></div>
+                        <span>PERSONAL.LOG</span>
+                    </div>
+                    <p class="about-text">
+                        A passionate learner exploring the realms of web development, diving deep into HTML, CSS, and JavaScript. Currently on an exciting journey to master frontend technologies while exploring the fascinating worlds of AI, Space Tech, Video editing, and Gaming.
+                    </p>
+                    <div class="interests-grid">
+                        <div class="interest-chip">Web Development</div>
+                        <div class="interest-chip">AI</div>
+                        <div class="interest-chip">Space Tech</div>
+                        <div class="interest-chip">Video Editing</div>
+                        <div class="interest-chip">Gaming</div>
+                    </div>
+                </div>
+
+                <div class="glass-card timeline-card">
+                    <div class="card-header">
+                        <div class="status-indicator planned"></div>
+                        <span>TIMELINE.SYSTEM</span>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>2024</h3>
+                                <p>Began the journey into web development</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>HTML & CSS</h3>
+                                <p>Mastered the fundamentals of web structure and styling</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>JavaScript</h3>
+                                <p>Currently diving deep into JavaScript programming</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Future</h3>
+                                <p>Exploring advanced frameworks and technologies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">SKILLS</h2>
+            <div class="skills-grid">
+                <div class="glass-card skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">HTML</span>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                </div>
+                <div class="glass-card skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">CSS</span>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                </div>
+                <div class="glass-card skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-percentage">60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="60%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+
+    <!-- Projects Section - ENHANCED -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">PROJECTS</h2>
+            <div class="projects-grid">
+
+                <!-- Weather App Card -->
+                <div class="glass-card project-card enhanced-card" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="project-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <h3 class="project-title">Weather App</h3>
+                        <p class="project-description">Real-time weather checker using free APIs with beautiful animated interface and location detection.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">HTML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-particles"></div>
+                </div>
+
+                <!-- Random Generator Card -->
+                <div class="glass-card project-card enhanced-card" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="project-icon">
+                            <i class="fas fa-dice"></i>
+                        </div>
+                        <h3 class="project-title">Random Generator</h3>
+                        <p class="project-description">A JavaScript tool that generates random outputs including numbers, passwords, colors, and quotes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">DOM</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">HTML5</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-particles"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard">
+        <div class="container dashboard-container">
+            <h2 class="section-title">COMMAND CENTER</h2>
+            <div class="dashboard-3d-wrapper">
+                <div id="dashboard-3d-scene"></div>
+
+                <div class="floating-ui-element" style="top: 10%; left: 5%;">
+                    <div class="ui-panel glass-card">
+                        <div class="ui-title">SYSTEM STATUS</div>
+                        <div class="ui-value">ONLINE</div>
+                    </div>
+                </div>
+
+                <div class="floating-ui-element" style="top: 20%; right: 5%;">
+                    <div class="ui-panel glass-card">
+                        <div class="ui-title">PERFORMANCE</div>
+                        <div class="ui-value">97.3%</div>
+                    </div>
+                </div>
+
+                <div class="floating-ui-element" style="bottom: 20%; left: 10%;">
+                    <div class="ui-panel glass-card">
+                        <div class="ui-title">UPTIME</div>
+                        <div class="ui-value">24/7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="contact-form-container">
+                <form id="contact-form" class="contact-form glass-card">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" class="form-input" required>
+                        <label for="name" class="form-label">Name</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-input" required>
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" id="subject" class="form-input" required>
+                        <label for="subject" class="form-label">Subject</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" class="form-input" rows="5" required></textarea>
+                        <label for="message" class="form-label">Message</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="neon-line"></div>
+            <div class="footer-content">
+                <p>&copy; 2025 Rahul Saini. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/rahulsainii38/" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://github.com/Rahulsaini356" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>Github</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
